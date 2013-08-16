@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquery-lazymouse.js"></script>
+	<style type="text/css">
+	body{
+		padding: 100px;
+		font-size: 48px;
+		line-height: 70px;
+	}
+	</style>
+</head>
+<body>
+	<script>
+		
+		$(document).ready(function(){
+			$("body").bind("mouse.active",function(){
+				$("body").html("Mouse Active. Give it a rest for 2 Seconds").css({backgroundColor:"#fff",color:"#222"});
+			});
+			$("body").bind("mouse.inactive",function(){
+				$("body").html("Mouse Inactive").css({backgroundColor:"#ddd",color:"#c0392b"});
+			});
+			
+			$.LazyMouse({
+				delay:2000
+			});
+		});
+	</script>
+</body>
+</html>
