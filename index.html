@@ -4,24 +4,38 @@
 	<script src="js/jquery-1.10.2.js"></script>
 	<script src="js/jquery-lazymouse.js"></script>
 	<style type="text/css">
-	body{
+	.result{
+		margin-top: 100px;
 		padding: 100px;
 		font-size: 48px;
 		line-height: 70px;
 	}
+	.fork{
+		position: absolute;
+		top:0;
+		left: 0;
+		z-index: 2000;
+	}
 	</style>
 </head>
 <body>
+	<div class="fork">
+		<a href='https://github.com/hasinhayder/LazyMouse' target='_blank'><img src="img/fork.png" alt="" ></a>
+	</div>
+	<div class="result">
+	
+	</div>
 	<script>
-		
 		$(document).ready(function(){
 			$("body").bind("mouse.active",function(){
-				$("body").html("Mouse Active. Give it a rest for 2 Seconds").css({backgroundColor:"#fff",color:"#222"});
+				$(".result").html("Mouse Active. Give it a rest for 2 Seconds");
+				$("body").css({backgroundColor:"#fff",color:"#222"});
 			});
 			$("body").bind("mouse.inactive",function(){
-				$("body").html("Mouse Inactive").css({backgroundColor:"#ddd",color:"#c0392b"});
+				$(".result").html("Mouse Inactive");
+				$("body").css({backgroundColor:"#ddd",color:"#c0392b"});
 			});
-			
+
 			$.LazyMouse({
 				delay:2000
 			});
