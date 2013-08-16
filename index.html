@@ -23,16 +23,16 @@
 		<a href='https://github.com/hasinhayder/LazyMouse' target='_blank'><img src="img/fork.png" alt="" ></a>
 	</div>
 	<div class="result">
-	
+		<span style="color:#2980b9">Move The Mouse</span>
 	</div>
 	<script>
 		$(document).ready(function(){
 			$("body").bind("mouse.active",function(){
-				$(".result").html("Mouse Active. Give it a rest for 2 Seconds");
+				$(".result").html("Mouse Is Active. Now give it a rest for 2 Seconds");
 				$("body").css({backgroundColor:"#fff",color:"#222"});
 			});
 			$("body").bind("mouse.inactive",function(){
-				$(".result").html("Mouse Inactive");
+				$(".result").html("Mouse Is Inactive");
 				$("body").css({backgroundColor:"#ddd",color:"#c0392b"});
 			});
 
